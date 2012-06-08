@@ -1,6 +1,6 @@
 # Copyright 2012 Google Inc. All Rights Reserved.
 
-"""Handlers and MapReduce Pipeline descriptions.
+"""Handlers for Starting and Polling query jobs.
 """
 
 __author__ = 'manoochehri@google.com (Michael Manoochehri)'
