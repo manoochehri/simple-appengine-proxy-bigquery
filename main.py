@@ -14,7 +14,6 @@ from oauth2client.appengine import AppAssertionCredentials
 
 # BigQuery API Settings
 SCOPE = 'https://www.googleapis.com/auth/bigquery'
-
 PROJECT_ID = 'XXXXXXXXXX' # REPLACE WITH YOUR Project ID
 
 # Create a new API service for interacting with BigQuery
@@ -44,6 +43,7 @@ class StartQueryHandler(webapp.RequestHandler):
     except:
       self.response.out.write('Error connecting to the BigQuery API')
 
+
 class CheckQueryHandler(webapp.RequestHandler):
   def get(self, job_id):
     query_job = bigquery_service.jobs()
@@ -56,6 +56,7 @@ class CheckQueryHandler(webapp.RequestHandler):
       self.response.out.write(queryReply)
     except:
       self.response.out.write('Error connecting to the BigQuery API')
+
 
 application = webapp.WSGIApplication(
                                      [('/startquery(.*)', StartQueryHandler),
